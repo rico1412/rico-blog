@@ -1,0 +1,589 @@
+---
+layout: post
+title:  "rico php"
+date:   2018-07-08 20:25:57 +0800
+categories: jekyll update
+---
+
+# PHP常用函数
+
+## 字符串常用函数
+
++ explode
+
+  ```php
+  array explode  ( string $delimiter  , string $string  [, int $limit  ] )
+  ```
+
+  > 此函数返回由字符串组成的数组，每个元素都是    `string`    的一个子串，它们被字符串    `delimiter`    作为边界点分割出来。 
+
++ implode
+
+  ```php
+  string implode  ( string $glue  , array $pieces  )
+  
+  string implode  ( array $pieces  )
+  ```
+
+  > 将一个一维数组的值转化为字符串 
+
++ echo
+
+  ```php
+  void  echo  ( string $arg1  [, string $...  ] )
+  ```
+
+  > 输出所有参数。
+
++ crc32
+
+  ```php
+  int crc32  ( string $str  )
+  ```
+
+  > 生成 `str`    的 32 位循环冗余校验码多项式。这通常用于检查传输的数据是否完整
+
++ htmlspecialchars_decode
+
+  ```php
+  string htmlspecialchars_decode  ( string $string  [, int $flags  = ENT_COMPAT | ENT_HTML401  ] )
+  ```
+
+  > 将特殊的 HTML 实体转换回普通字符   
+
++ htmlspecialchars
+
+  ```php
+  string htmlspecialchars  ( string $string  [, int $flags  = ENT_COMPAT | ENT_HTML401  [, string $encoding  = ini_get("default_charset")  [, bool $double_encode  = true  ]]] )
+  ```
+
+  > 预定义字符转html编码 
+
++ md5
+
+  ```php
+  string md5  ( string $str  [, bool $raw_output  = false  ] )
+  ```
+
+  > 使用RSA 数据安全公司的 MD5 报文算法计算 `str` 的 MD5 散列值。
+
++ trim
+
+  ```php
+  string trim  ( string $str  [, string $charlist  = " \t\n\r\0\x0B"  ] )
+  ```
+
+  >  去除字符串首尾处的空白字符（或者其他字符） 
+
++ ltrim
+
+  ```php
+  string ltrim  ( string $str  [, string $character_mask  ] )
+  ```
+
+  > 删除字符串开头的空白字符（或其他字符）
+
++ rtrim
+
+  ```php
+  string rtrim  ( string $str  [, string $character_mask  ] )
+  ```
+
+  > 删除字符串末端的空白字符（或者其他字符）
+
++ printf
+
+  ```php
+  int printf  ( string $format  [, mixed  $args  [, mixed  $...  ]] )
+  ```
+
+  > 输出格式化字符串
+
++ str_repeat
+
+  ```php
+  string str_repeat  ( string $input  , int $multiplier  )
+  ```
+
+  > 重复一个字符串
+
++ str_replace
+
+  ```php
+  mixed  str_replace  ( mixed  $search  , mixed  $replace  , mixed  $subject  [, int &$count  ] )
+  ```
+
+  > 子字符串替换
+
++ str_shuffle
+
+  ```php
+  string str_shuffle  ( string $str  )
+  ```
+
+  > 随机打乱一个字符串
+
++ str_split
+
+  ```php
+  array str_split  ( string $string  [, int $split_length  = 1  ] )
+  ```
+
+  > 将字符串转换为数组
+
++ strlen
+
+  ```php
+  int strlen  ( string $string  )
+  ```
+
+  > 获取字符串长度 
+
++ strpos
+
+  ```php
+  mixed  strpos  ( string $haystack  , mixed  $needle  [, int $offset  = 0  ] )
+  ```
+
+  > 查找字符串首次出现的位置 
+
++ strtolower
+
+  ```php
+  string strtolower  ( string $string  )
+  ```
+
+  > 将字符串转化为小写 
+
++ strtoupper
+
+  ```php
+  string strtoupper  ( string $string  )
+  ```
+
+  > 将字符串转化为大写 
+
++ substr
+
+  ```php
+  string substr  ( string $string  , int $start  [, int $length  ] )
+  ```
+
+  > 返回字符串的子串
+
++ ucfirst
+
+  ```php
+  string ucfirst  ( string $str  )
+  ```
+
+  > 将字符串的首字母转换为大写
+
+---
+
+## 数组常用函数
+
++ array_keys
+
+  ```php
+  array array_keys  ( array $array  [, mixed  $search_value  [, bool $strict  = false  ]] )
+  ```
+
+  > 返回数组中部分的或所有的键名
+
++ array_merge
+
+  ```php
+  array array_merge  ( array $array1  [, array $...  ] )
+  ```
+
+  > 合并一个或多个数组 
+
++ array_pop
+
+  ```php
+  mixed  array_pop  ( array &$array  )
+  ```
+
+  > 将数组最后一个单元弹出（出栈）
+
++ array_push
+
+  ```php
+  int array_push  ( array &$array  , mixed  $var  [, mixed  $...  ] )
+  ```
+
+  > 将一个或多个单元压入数组的末尾（入栈）   
+
++ array_rand
+
+  ```php
+  mixed  array_rand  ( array $input  [, int $num_req  = 1  ] )
+  ```
+
+  > 从数组中随机取出一个或多个单元
+
++ array_reverse
+
+  ```php
+  array array_reverse  ( array $array  [, bool $preserve_keys  = false  ] )
+  ```
+
+  > 返回一个单元顺序相反的数组 
+
++ array_shift
+
+  ```php
+  mixed  array_shift  ( array &$array  )
+  ```
+
+  > 将数组开头的单元移出数组     
+
++ array_unshift
+
+  ```php
+  int array_unshift  ( array &$array  , mixed  $var  [, mixed  $...  ] )
+  ```
+
+  > 在数组开头插入一个或多个单元
+
++ array_values
+
+  ```php
+  array array_values  ( array $input  )
+  ```
+
+  > 返回数组中所有的值 
+
++ arsort
+
+  ```php
+  bool arsort  ( array &$array  [, int $sort_flags  = SORT_REGULAR  ] )
+  ```
+
+  > 对数组进行逆向排序并保持索引关系     
+
++ asort
+
+  ```php
+  bool asort  ( array &$array  [, int $sort_flags  = SORT_REGULAR  ] )
+  ```
+
+  > 对数组进行排序并保持索引关系
+
++ sort
+
+  ```php
+  bool sort  ( array &$array  [, int $sort_flags  = SORT_REGULAR  ] )
+  ```
+
+  > 对数组排序 
+
++ rsort
+
+  ```php
+  bool rsort  ( array &$array  [, int $sort_flags  = SORT_REGULAR  ] )
+  ```
+
+  > 对数组逆向排序 
+
++ ksort
+
+  ```php
+  bool ksort  ( array &$array  [, int $sort_flags  = SORT_REGULAR  ] )
+  ```
+
+  > 对数组按照键名排序 
+
++ krsort
+
+  ```php
+  bool krsort  ( array &$array  [, int $sort_flags  = SORT_REGULAR  ] )
+  ```
+
+  > 对数组按照键名逆向排序 
+
++ count
+
+  ```php
+  int count  ( mixed  $var  [, int $mode  = COUNT_NORMAL  ] )
+  ```
+
+  > 计算数组中的单元数目或对象中的属性个数 
+
++ in_array
+
+  ```php
+  bool in_array  ( mixed  $needle  , array $haystack  [, bool $strict  = FALSE    ] )
+  ```
+
+  > 检查数组中是否存在某个值 
+
++ list
+
+  ```php
+  array list  ( mixed  $varname  [, mixed  $...  ] )
+  ```
+
+  > 把数组中的值赋给一些变量     
+
++ range
+
+  ```php
+  array range  ( mixed  $start  , mixed  $limit  [, number  $step  = 1  ] )
+  ```
+
+  > 建立一个包含指定范围单元的数组     
+
++ shuffle
+
+  ```php
+  bool shuffle  ( array &$array  )
+  ```
+
+  > 将数组打乱 
+
+---
+
+## 数学相关函数
+
++ abs
+
+  ```php
+  number  abs  ( mixed  $number  )
+  ```
+
+  > 绝对值 
+
++ ceil
+
+  ```php
+  float ceil  ( float $value  )
+  ```
+
+  > 进一法取整（天花板函数）
+
++ floor
+
+  ```php
+  float floor  ( float $value  )
+  ```
+
+  > 舍去法取整 （地板函数）
+
++ is_nan
+
+  ```php
+  bool is_nan  ( float $val  )
+  ```
+
+  > 判断是否为合法数值 
+
++ max
+
+  ```php
+  mixed  max  ( array $values  )
+  
+  mixed  max  ( mixed  $value1  , mixed  $value2  [, mixed  $...  ] )
+  ```
+
+  > 找出最大值 
+
++ min
+
+  ```php
+  mixed  min  ( array $values  )
+  
+  mixed  min  ( mixed  $value1  , mixed  $value2  [, mixed  $...  ] )
+  ```
+
+  > 找出最小值 
+
++ rand
+
+  ```php
+  int rand  ( void )
+  
+  int rand  ( int $min  , int $max  )
+  ```
+
+  > 产生一个随机整数 
+
++ mt_rand
+
+  ```php
+  int mt_rand  ( void )
+  
+  int mt_rand  ( int $min  , int $max  )
+  ```
+
+  > 生成更好的随机数 
+
++ pi
+
+  ```php
+  float pi  ( void )
+  ```
+
+  > 得到圆周率值 
+
++ pow
+
+  ```php
+  number  pow  ( number  $base  , number  $exp  )
+  ```
+
+  > 指数表达式 
+
++ round
+
+  ```php
+  float round  ( float $val  [, int $precision  = 0  [, int $mode  = PHP_ROUND_HALF_UP  ]] )
+  ```
+
+  > 对浮点数进行四舍五入 
+
++ sqrt
+
+  ```php
+  float sqrt  ( float $arg  )
+  ```
+
+  > 平方根 
+
+---
+
+## 文件处理相关函数
+
++ basename
+
+  ```php
+  string basename  ( string $path  [, string $suffix  ] )
+  ```
+
+  > 返回路径中的文件名部分
+
++ copy
+
+  ```php
+  bool copy  ( string $source  , string $dest  [, resource $context  ] )
+  ```
+
+  > 将文件从 `source` 拷贝到 `dest`。 
+
++ rename
+
+  ```php
+  bool rename  ( string $oldname  , string $newname  [, resource $context  ] )
+  ```
+
+  > 尝试把 `oldname` 重命名为    `newname`。
+
++ unlink
+
+  ```php
+  bool unlink  ( string $filename  [, resource $context  ] )
+  ```
+
+  > 删除 `filename`。和 Unix C 的    unlink() 函数相似。   发生错误时会产生一个 **E_WARNING**  级别的错误。 
+
++ dirname
+
+  ```php
+  string dirname  ( string $path  )
+  ```
+
+  > 返回路径中的目录部分 
+
++ fopen
+
+  ```php
+  resource fopen  ( string $filename  , string $mode  [, bool $use_include_path  = false  [, resource $context  ]] )
+  ```
+
+  > 打开文件或者 URL 
+
++ fclose
+
+  ```php
+  bool fclose  ( resource $handle  )
+  ```
+
+  > 关闭一个已打开的文件指针
+
++ file_exists
+
+  ```php
+  bool file_exists  ( string $filename  )
+  ```
+
+  > 检查文件或目录是否存在 
+
++ file_get_contents
+
+  ```php
+  string file_get_contents  ( string $filename  [, bool $use_include_path  = false  [, resource $context  [, int $offset  = -1  [, int $maxlen  ]]]] )
+  ```
+
+  > 将整个文件读入一个字符串
+
++ file_put_contents
+
+  ```php
+  int file_put_contents  ( string $filename  , mixed  $data  [, int $flags  = 0  [, resource $context  ]] )
+  ```
+
+  > 将一个字符串写入文件 
+
++ flock
+
+  ```php
+  bool flock  ( resource $handle  , int $operation  [, int &$wouldblock  ] )
+  ```
+
+  > 轻便的咨询文件锁定 
+
++ mkdir
+
+  ```php
+  bool mkdir  ( string $pathname  [, int $mode  = 0777  [, bool $recursive  = false  [, resource $context  ]]] )
+  ```
+
+  > 新建目录 
+
++ rmdir
+
+  ```php
+  bool rmdir  ( string $dirname  [, resource $context  ] )
+  ```
+
+  > 删除目录 
++ pathinfo
+
+  ```php
+  mixed  pathinfo  ( string $path  [, int $options  = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME  ] )
+  ```
+
+  > **pathinfo()**  返回一个关联数组包含有 *path*    的信息。返回关联数组还是字符串取决于 `options`。 
+---
+
+## 日期时间函数
+
++ date
+
+  ```php
+  string date  ( string $format  [, int $timestamp  ] )
+  ```
+
+  > 格式化一个本地时间／日期
+
++ time
+
+  ```php
+  int time  ( void )
+  ```
+
+  > 返回当前的 Unix 时间戳 
+
+  
+
